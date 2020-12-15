@@ -2,13 +2,23 @@ import React from 'react';
 import List from '../../components/List';
 import { Container } from './styles';
 
-const transactions = [
+interface TransactionData {
+    title: string;
+    type: keyof typeof TransactionTypeVariant;
+}
+
+enum TransactionTypeVariant {
+    OPEN = 'adiado',
+    PAID = 'pago'
+}
+
+const transactions: TransactionData[] = [
     {
-        type: 'adiado',
+        type: 'OPEN',
         title: 'Novo brinquedo'
     },
     {
-        type: 'pago',
+        type: 'PAID',
         title: 'Aluguel'
     }
 ];

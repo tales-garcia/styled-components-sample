@@ -8,7 +8,12 @@ interface ListProps {
 
 interface TransactionData {
     title: string;
-    type: string;
+    type: keyof typeof TransactionTypeVariant;
+}
+
+enum TransactionTypeVariant {
+    OPEN = 'adiado',
+    PAID = 'pago'
 }
 
 const List: React.FC<ListProps> = ({ transactions }) => {
