@@ -1,16 +1,11 @@
 import React from 'react';
-import List from './components/List';
+import Transactions from './pages/Transactions';
 import GlobalStyle from './styles/global';
-
-const transactions = [
-  {},
-  {}
-];
 
 function App() {
   return (
     <>
-      <List transactions={transactions} />
+      <Transactions />
       <GlobalStyle />
     </>
   );
