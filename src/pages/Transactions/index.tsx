@@ -3,8 +3,14 @@ import List from '../../components/List';
 import { Container } from './styles';
 
 const transactions = [
-    {},
-    {}
+    {
+        type: 'adiado',
+        title: 'Novo brinquedo'
+    },
+    {
+        type: 'pago',
+        title: 'Aluguel'
+    }
 ];
 
 const Transactions: React.FC = () => {

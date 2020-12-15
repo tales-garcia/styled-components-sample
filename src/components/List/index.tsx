@@ -3,14 +3,19 @@ import TransactionCard from '../TransactionCard';
 import { Container } from './styles';
 
 interface ListProps {
-    transactions: object[];
+    transactions: TransactionData[];
+}
+
+interface TransactionData {
+    title: string;
+    type: string;
 }
 
 const List: React.FC<ListProps> = ({ transactions }) => {
     return (
         <Container>
             {transactions.map(transaction => (
-                <TransactionCard />
+                <TransactionCard transaction={transaction} />
             ))}
         </Container>
     );

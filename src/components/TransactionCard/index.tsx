@@ -1,11 +1,20 @@
 import React from 'react';
 import { Container } from './styles';
 
-const TransactionCard: React.FC = () => {
+interface TransactionData {
+    title: string;
+    type: string;
+}
+
+interface TransactionCardProps {
+    transaction: TransactionData;
+}
+
+const TransactionCard: React.FC<TransactionCardProps> = ({ transaction }) => {
     return (
         <Container>
-            <div>hi</div>
-            <div>adiado</div>
+            <div>{transaction.title}</div>
+            <div>{transaction.type}</div>
         </Container>
     );
 }
