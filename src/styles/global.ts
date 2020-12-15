@@ -11,6 +11,10 @@ export default createGlobalStyle`
         background: #cfcfcf;
         color: #4a4a4a;
         -webkit-font-smoothing: antialiased;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     body, input, button {
         font-family: 'Roboto Slab', serif;

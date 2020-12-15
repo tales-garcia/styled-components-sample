@@ -1,10 +1,16 @@
 import React from 'react';
+import List from './components/List';
 import GlobalStyle from './styles/global';
+
+const transactions = [
+  {},
+  {}
+];
 
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <List transactions={transactions} />
       <GlobalStyle />
     </>
   );
